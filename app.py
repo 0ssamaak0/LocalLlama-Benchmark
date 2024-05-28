@@ -165,7 +165,10 @@ if st.button("Submit"):
     # Check if the file exists and read the data
     if os.path.exists("results.json"):
         with open("results.json", "r") as f:
-            data = json.load(f)
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                data = []
     else:
         data = []
 
