@@ -29,7 +29,7 @@ By leveraging LocalLlama, you can compare the performance of models on CPU and G
 """
 )
 title_cols[1].image(
-    "https://raw.githubusercontent.com/0ssamaak0/LocallamaBenchMark/main/assets/LlBN.png",
+    "https://raw.githubusercontent.com/0ssamaak0/LocalLlama-Benchmark/main/assets/LlBN.png",
     width=350,
 )
 
