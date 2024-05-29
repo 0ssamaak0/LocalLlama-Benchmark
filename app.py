@@ -19,7 +19,7 @@ title_cols = st.columns([4, 1, 2])
 title_cols[0].title("LocalLlama Benchmark")
 title_cols[0].markdown(
     """
-LocalLlama Benchmark is a benchmarking tool that provides insights into the performance of LLMs on different hardware configurations. Allowing you to compare and make informed decisions about the optimal hardware configuration for your specific use case.
+LocalLlama Benchmark aims to openly collect data that provides insights into the performance of LLMs on different hardware configurations. Allowing you to compare and make informed decisions about the optimal hardware configuration for your specific use case.
 
 [CURRENTLY COLLECTING DATA, AFTER SUFFICIENT DATA IS COLLECTED, WE WILL PROVIDE THE INSIGHTS]
 
