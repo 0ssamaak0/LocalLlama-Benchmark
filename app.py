@@ -15,7 +15,7 @@ with open("data/ollama_models.json", "r") as f:
     ollama_models = json.load(f)  # read ollama_models.json into a dictionary
 
 # Title
-title_cols = st.columns([3, 2])
+title_cols = st.columns([4, 1, 2])
 title_cols[0].title("LocalLlama Benchmark")
 title_cols[0].markdown(
     """
@@ -26,9 +26,9 @@ LocalLlama Benchmark is a benchmarking tool that provides insights into the perf
 🔵 Note: all data is open and shared with the community [Check Download button at the end of the page]
 """
 )
-title_cols[1].image(
+title_cols[2].image(
     "https://raw.githubusercontent.com/0ssamaak0/LocalLlama-Benchmark/main/assets/icon.png",
-    width=300,
+    width=220,
 )
 
 st.subheader("Machine Specs")
