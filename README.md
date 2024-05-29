@@ -51,10 +51,13 @@ eval rate:            17.05 tokens/s ➡️ Output rate
 
 
 # Todo
+- [ ] Add GPUs Variations. (e.g., A100)
 - [ ] Extend support for more formats other than GGUF.
 - [ ] Add Visualizations and comparison tools.
 - [ ] Automatically fetch token rates from CLI-run models
 
 # Resources
-- [CPU & GPUs from UserBenchmark](https://www.userbenchmark.com/page/developer) + Apple Silicon Added Manually
+- [CPU & User GPUs from UserBenchmark](https://www.userbenchmark.com/page/developer)
+- [Other Nvidia GPUS from Wikipedia](https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units)
+- Apple Silicon Added Manually
 - [Ollama-Models for models list](https://github.com/akazwz/ollama-models)

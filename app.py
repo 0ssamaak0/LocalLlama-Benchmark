@@ -1,6 +1,6 @@
 import streamlit as st
+from st_files_connection import FilesConnection
 import json
-import matplotlib.pyplot as plt
 from pathlib import Path
 import os
 
@@ -156,20 +156,15 @@ if st.session_state.stage > 0:
             )
 
 
+conn = st.connection('s3', type=FilesConnection)
+
+
 # Submit button
 cols = st.columns([1,2,15])
 if cols[0].button("Submit", type = "primary"):
     st.session_state.models = current_models
     set_stage(2)
-    # Check if the file exists and read the data
-    if os.path.exists("results.json"):
-        with open("results.json", "r") as f:
-            try:
-                data = json.load(f)
-            except json.JSONDecodeError:
-                data = []
-    else:
-        data = []
+    data = conn.read("locallamabenchmark/results.json", input_format="json")
 
     # Append new data
     data.append(
@@ -184,26 +179,18 @@ if cols[0].button("Submit", type = "primary"):
     )
 
     # Write the data back to the file
-    with open("results.json", "w") as f:
+    with conn.open("locallamabenchmark/results.json", "w") as f:
         json.dump(data, f)
 
-    st.success("Information submitted and written to results.json")
+    st.success("Thanks for submitting the data! 🎉")
 
 
-# read data
-@st.cache_data
-def get_results(path="results.json"):
-    with open(path, "r") as f:
-        try:
-            return json.load(f)
-        except json.JSONDecodeError:
-            return []
+data = conn.read("locallamabenchmark/results.json", input_format="json")
+data = str(data)
 
-
-results = get_results()
 # Download Raw Data
 cols[1].download_button(
     label="Download data ⬇️",
-    data=Path("results.json").read_text(),
+    data=data,
     file_name="LocalLlamaBenchmark.json",
 )

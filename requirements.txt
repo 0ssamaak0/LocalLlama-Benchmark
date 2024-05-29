@@ -1,0 +1,2 @@
+s3fs
+st-files-connection
