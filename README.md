@@ -5,6 +5,7 @@
 LocalLlama Benchmark is a benchmarking tool that provides insights into the performance of LLMs on different hardware configurations. Allowing you to compare and make informed decisions about the optimal hardware configuration for your specific use case.
 
 <br>
+<br>
 
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-App%20Link-yellow)](https://huggingface.co/spaces/0ssamaak0/LocalLlama-Benchmark)
 
