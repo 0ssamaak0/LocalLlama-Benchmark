@@ -7,7 +7,9 @@ LocalLlama Benchmark is a benchmarking tool that provides insights into the perf
 <br>
 <br>
 
-[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-App%20Link-yellow)](https://huggingface.co/spaces/0ssamaak0/LocalLlama-Benchmark)
+
+
+[![App Link](https://img.shields.io/badge/-App%20Link-white?logo=streamlit)](https://localllama-benchmark.streamlit.app/)
 
 </div>
 <br>
