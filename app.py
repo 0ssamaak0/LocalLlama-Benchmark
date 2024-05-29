@@ -19,18 +19,16 @@ title_cols = st.columns([3, 2])
 title_cols[0].title("LocalLlama Benchmark")
 title_cols[0].markdown(
     """
-LocalLlama Benchmark is a benchmarking tool that provides insights into the performance of various machine learning models on different hardware configurations. 
+LocalLlama Benchmark is a benchmarking tool that provides insights into the performance of LLMs on different hardware configurations. Allowing you to compare and make informed decisions about the optimal hardware configuration for your specific use case.
 
-By leveraging LocalLlama, you can compare the performance of models on CPU and GPU, helping you make informed decisions about the optimal hardware configuration for your specific use case.
+[CURRENTLY COLLECTING DATA, AFTER SUFFICIENT DATA IS COLLECTED, WE WILL PROVIDE THE INSIGHTS]
 
-[WE ARE CURRENTLY COLLECTING DATA. AFTER SUFFICIENT DATA IS COLLECTED, WE WILL PROVIDE THE INSIGHTS]
-
-**Note: all data is open-source and shared with the community.**
+🔵 Note: all data is open and shared with the community [Check Download button at the end of the page]
 """
 )
 title_cols[1].image(
-    "https://raw.githubusercontent.com/0ssamaak0/LocalLlama-Benchmark/main/assets/LlBN.png",
-    width=350,
+    "https://raw.githubusercontent.com/0ssamaak0/LocalLlama-Benchmark/main/assets/icon.png",
+    width=300,
 )
 
 st.subheader("Machine Specs")
@@ -159,7 +157,8 @@ if st.session_state.stage > 0:
 
 
 # Submit button
-if st.button("Submit"):
+cols = st.columns([1,2,15])
+if cols[0].button("Submit", type = "primary"):
     st.session_state.models = current_models
     set_stage(2)
     # Check if the file exists and read the data
@@ -203,8 +202,8 @@ def get_results(path="results.json"):
 
 results = get_results()
 # Download Raw Data
-st.download_button(
-    label="Download data as JSON",
+cols[1].download_button(
+    label="Download data ⬇️",
     data=Path("results.json").read_text(),
     file_name="LocalLlamaBenchmark.json",
 )
